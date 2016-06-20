@@ -13,6 +13,7 @@ The JavaScript module ``axemas.js`` permits interaction with the native code of 
     - showProgressHUD
     - hideProgressHUD
     - getPlatform
+    - platformDetails
     - storeData
     - fetchData
     - removeData
@@ -109,6 +110,26 @@ Uses the ``navigator.userAgent`` object to determine if the current platform. Re
      if (axemas.getPlatform() == 'your_platform') {
          //do something
      }
+
+
+platformDetails
+---------------
+
+Getting information about device: ``model``, ``systemName`` and ``systemVersion``.
+
+For example::
+
+    axemas.platformDetails(function(device_info) {
+        console.log(device_info);
+    });
+    
+    // Example of the device_infor
+
+    //iOS Device
+    {model: "iPhone", systemVersion: "9.3", systemName: "iPhone OS"}
+
+    //Android Device
+    {model: "Nexus 5", systemName: "Android", systemVersion: "6.0.1"}
 
 
 storeData
